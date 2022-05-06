@@ -26,9 +26,9 @@ resource "aws_eip" "nat_gw_elastic_ip" {
      enable_nat_gateway            =  true
      single_nat_gateway            = true
      one_nat_gateway_per_az        = false
-     enable_dns_support_hostnames  = true
+     enable_dns_hostnames  = true
      reuse_nat_ips                 = true
-     external_nat_ip_ids           = [aws_eip.nat_gw_elastice_ip.id]
+     external_nat_ip_ids           = [aws_eip.nat_gw_elastic_ip.id]
 
      #Add vpc and subnet tags required by EKS
      tags = {
