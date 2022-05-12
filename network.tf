@@ -27,6 +27,7 @@ resource "aws_eip" "nat_gw_elastic_ip" {
      single_nat_gateway            = true
      one_nat_gateway_per_az        = false
      enable_dns_hostnames  = true
+     enable_dns_support = true
      reuse_nat_ips                 = true
      external_nat_ip_ids           = [aws_eip.nat_gw_elastic_ip.id]
 
